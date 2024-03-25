@@ -1,0 +1,14 @@
+{
+    "name": "threejs-seminar",
+    "version": "1.0.0",
+    "homepage": "https://hpicgs.github.io/seminar-extending-threejs-2023/",
+    "devDependencies": {
+        "gh-pages": "^6.1.1",
+        "html-webpack-plugin": "^5.6.0",
+        "webpack": "^5.91.0",
+        "webpack-cli": "^5.1.4"
+    },
+    "scripts": {
+        "build": "webpack build --output-clean"
+    }
+}
