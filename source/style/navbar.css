@@ -27,6 +27,30 @@
     text-decoration: none;
 }
 
+#navbar img {
+    height: 2.5rem;
+    width: auto;
+    vertical-align: middle;
+}
+
+#navbar-links {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-left: auto;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.navbar-link {
+    padding-left: 1.2rem;
+    padding-right: 0;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+}
+
 #navbar a:visited {
     color: var(--navbar-text-color);
 }
