@@ -1,0 +1,50 @@
+@import '~katex/dist/katex.min.css';
+@import '~highlight.js/styles/atom-one-dark.css';
+@import './link.css';
+@import './navbar.css';
+@import './sizes.css';
+@import './themes.css';
+
+:root {
+    --navbar-height: 3em;
+    --content-width: 70em;
+}
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 300;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+code {
+    font-family: 'Fira Mono', monospace;
+    color: var(--inline-code-color);
+}
+
+#main-container {
+    margin: auto;
+    padding: var(--navbar-height) var(--spacing) 0;
+    max-width: var(--content-width);
+}
+
+#main-container * {
+    max-width: 100%;
+}
+
+#main-container td {
+    vertical-align: top;
+    padding-bottom: var(--small-spacing);
+}
+
+.d-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+    gap: var(--spacing);
+    margin: var(--spacing) 0;
+}
+
+.d-none {
+    display: none;
+}

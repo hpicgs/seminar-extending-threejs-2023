@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "esModuleInterop": true,
+        "noImplicitAny": true,
+        "moduleResolution": "node",
+        "target": "ES2021",
+        "lib": [
+            "DOM",
+            "ES2021"
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "fw/*": [
+                "./source/*"
+            ],
+            "helper/*": [
+                "./source/code/helper/*"
+            ]
+        }
+    },
+    "include": [
+        "source/**/*.ts"
+    ]
+}
