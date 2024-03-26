@@ -10,7 +10,6 @@
     },
     "scripts": {
         "build": "webpack build --output-clean",
-        "publish": "gh-pages -d build",
-        "run": "npm run build && npm run publish"
+        "publish": "gh-pages -d build"
     }
 }
