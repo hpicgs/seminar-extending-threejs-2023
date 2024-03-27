@@ -1,5 +1,6 @@
 @import '~katex/dist/katex.min.css';
 @import '~highlight.js/styles/atom-one-dark.css';
+@import '~bootstrap/dist/css/bootstrap.min.css';
 @import './link.css';
 @import './navbar.css';
 @import './sizes.css';
@@ -38,9 +39,11 @@ code {
     padding-bottom: var(--small-spacing);
 }
 
-#main-container img {
+#fit-picture {
     width: 100vw;
     height: auto;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
 }
 
 .d-grid {
@@ -52,4 +55,16 @@ code {
 
 .d-none {
     display: none;
+}
+
+#logo-link {
+    height: 1em;
+    padding-top: 0.1em;
+    padding-bottom: 0.2em;
+    margin: 0 0.1ex;
+    width: auto;
+}
+
+.nowrap {
+    white-space: nowrap;
 }

@@ -1,6 +1,14 @@
-div#navbar-container
-    div#navbar
-        a(href='https://github.com/hpicgs'): img(src=require('../../img/cgs_logo.png'), alt="CGS Logo")
-        ul#navbar-links 
-            li: a(href='/', class="navbar-link") Link 1
-            li: a(href='/', class="navbar-link") Link 2
+//div#navbar-container
+//    div#navbar
+//        a(href='https://github.com/hpicgs'): img(src=require('../../img/cgs_logo.png'), alt="CGS Logo")
+//        ul#navbar-links 
+//            li: a(href='/', class="navbar-link") Link 1
+//            li: a(href='/', class="navbar-link") Link 2
+nav(class="navbar navbar-fixed-top navbar-expand-md")#seminar-navbar
+    .container
+        a(href='https://github.com/hpicgs', class="nav-link px-0")
+            span(class="d-none d-md-block")
+                img(src=require('../../img/cgs_logo.png'), class="img-fluid mt-0", alt="CGS Logo")
+        ul(class="navbar-nav ml-auto")#nav
+            li(class="nav-item"): a(href="#", class="nav-link") Link 1
+            li(class="nav-item"): a(href="#", class="nav-link") Link 2

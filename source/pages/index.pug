@@ -1,3 +1,17 @@
+mixin gh-link(student)
+    span.nowrap #[a(href=`github.com/${student.username}`): img(src=require("../img/github-mark-white.png"), alt="GitHub Logo")#logo-link] #[=student.name]
+
+mixin project(name, link, image, ...students)
+    h2
+        | #[=name] – 
+        each student, i in students 
+            | #[+gh-link(student)]
+            if i < students.length - 1
+                | , 
+    a(href=link): img(src=image, alt=name)#fit-picture
+    if block 
+        block
+
 html 
     head 
         title Three.js Seminar
@@ -7,6 +21,11 @@ html
         div#main-container
             h1 Introduction
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In molestie lectus quis erat semper, vel accumsan leo dignissim. Nullam viverra tellus lorem, at pharetra dolor pellentesque eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisl sem, pharetra et odio a, tincidunt aliquam ex. Nunc fringilla ipsum ac mauris bibendum, quis mattis turpis faucibus. Duis ullamcorper nulla orci, in cursus sem elementum in. Integer auctor, orci egestas vestibulum porta, massa quam tincidunt tellus, ut mollis ante enim nec justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis leo eget lacus ultricies, sit amet volutpat ipsum ornare. 
-            h2 Group 1 – Max Mustermann, Jane Doe
-            img(class="fit-picture", src=require("../img/test_image.png"), alt="Testing Image")
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In molestie lectus quis erat semper, vel accumsan leo dignissim. Nullam viverra tellus lorem, at pharetra dolor pellentesque eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisl sem, pharetra et odio a, tincidunt aliquam ex. Nunc fringilla ipsum ac mauris bibendum, quis mattis turpis faucibus. Duis ullamcorper nulla orci, in cursus sem elementum in. Integer auctor, orci egestas vestibulum porta, massa quam tincidunt tellus, ut mollis ante enim nec justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis leo eget lacus ultricies, sit amet volutpat ipsum ornare. 
+            +project(
+                "World-in-Hand Navigation for Three.js",
+                "https://orbitnavjs.github.io/WIHNavigationWebsite/",
+                require("../img/wih_preview.png"),
+                {name: "Sandro Steeger", username: "Stastez"},
+                {name: "BelanaZ", name: "BelanaZ"}
+            )
+                p This navigation method aims to enhance the user experience by allowing users to interact with the virtual world as if it were a tangible object in their hands. By bridging the gap between the user's interaction and the virtual camera's movement, World-In-Hand Navigation offers a more intuitive, robust, and user-friendly navigation experience compared to the traditional navigation controls provided by Three.js

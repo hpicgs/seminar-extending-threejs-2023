@@ -3,6 +3,10 @@ a {
     text-decoration: none;
 }
 
+.navbar a {
+    color: var(--navbar-link-color);
+}
+
 a:visited {
     color: var(--visited-link-color);
 }

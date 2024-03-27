@@ -1,10 +1,32 @@
-#navbar-container, #navbar-navigation {
+#seminar-navbar {
+    background-color: var(--navbar-background-color);
+    color: var(--navbar-text-color);
+    border-color: var(--navbar-background-color);
+}
+
+.navbar img {
+    height: 2.5rem;
+    width: auto;
+    vertical-align: middle;
+}
+
+.nav-link {
+    padding: 0 0 0 0;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.navbar>.container {
+    max-width: var(--content-width);
+    padding: 0 var(--spacing);
+}
+
+/*#navbar-container, #navbar-navigation {
     position: fixed;
     width: 100%;
 }
 
 #navbar-container {
-    /* ensure navbar is placed over canvas */
     z-index: 1;
     top: 0;
     height: var(--navbar-height);
@@ -83,3 +105,4 @@
 #navbar-navigation p {
     margin: var(--small-spacing) 0;
 }
+*/

@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "homepage": "https://hpicgs.github.io/seminar-extending-threejs-2023/",
     "devDependencies": {
+        "bootstrap": "^4.6.2",
         "css-loader": "^6.10.0",
         "gh-pages": "^6.1.1",
         "highlight.js": "^11.9.0",
