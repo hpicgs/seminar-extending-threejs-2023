@@ -1,5 +1,5 @@
 mixin gh-link(student)
-    span.nowrap #[a(href=`github.com/${student.username}`): img(src=require("../img/github-mark-white.png"), alt="GitHub Logo")#logo-link] #[=student.name]
+    span.nowrap #[a(href=`https://www.github.com/${student.username}`): img(src=require("../img/github-mark-white.png"), alt="GitHub Logo")#logo-link] #[=student.name]
 
 mixin project(name, link, image, ...students)
     h2
@@ -26,6 +26,6 @@ html
                 "https://orbitnavjs.github.io/WIHNavigationWebsite/",
                 require("../img/wih_preview.png"),
                 {name: "Sandro Steeger", username: "Stastez"},
-                {name: "BelanaZ", name: "BelanaZ"}
+                {name: "BelanaZ", username: "BelanaZ"}
             )
                 p This navigation method aims to enhance the user experience by allowing users to interact with the virtual world as if it were a tangible object in their hands. By bridging the gap between the user's interaction and the virtual camera's movement, World-In-Hand Navigation offers a more intuitive, robust, and user-friendly navigation experience compared to the traditional navigation controls provided by Three.js
