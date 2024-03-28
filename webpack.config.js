@@ -25,11 +25,11 @@ module.exports = {
 	},
 	module: {
         rules: [
-            {
-                test: /\.ts$/,
-                use: { loader: 'ts-loader' },
-                exclude: /node_modules/,
-            },
+            // {
+            //     test: /\.ts$/,
+            //     use: { loader: 'ts-loader' },
+            //     exclude: /node_modules/,
+            // },
             {
                 test: /\.pug$/,
                 use: {

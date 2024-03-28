@@ -1,5 +1,8 @@
 mixin gh-link(student)
-    span.nowrap #[a(href=`https://www.github.com/${student.username}`): img(src=require("../img/github-mark-white.png"), alt="GitHub Logo")#logo-link] #[=student.name]
+    span.nowrap
+        a(href=`https://www.github.com/${student.username}`)
+            img(src=require("../img/github-mark-white.png"), alt="GitHub Logo")#logo-link
+            | &nbsp;#[=student.name]
 
 mixin project(name, link, image, ...students)
     h2
