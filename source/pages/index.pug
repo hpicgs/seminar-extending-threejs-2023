@@ -4,27 +4,8 @@ mixin gh-link(student)
             img(src=require("../img/github-mark-white.png"), alt="GitHub Logo").logo-link
             | &nbsp;#[=student.name]
 
-mixin project2(name, link, image, ...students)
-    .row.text-left 
-        .col-12.offset-0
-            h2
-                a(href=link)
-                    | #[=name]
-                | &nbsp;–&nbsp;
-                each student, i in students 
-                    | #[+gh-link(student)]
-                    if i < students.length - 1
-                        | , 
-    .row.text-center 
-        .col-10.offset-1.col-sm-8.offset-sm2.col-md-8.offset-md-2
-            a(href=link): img(src=image, alt=name).img-fluid
-    if block 
-        .row.text-left 
-            .col-12.offset-0
-                block
-
 mixin project(name, link, image, ...students)
-    .col-sm-4.mb-4
+    .col-lg-4.col-md-6.col-sm-12.mb-4
         .card.bg-dark.border-secondary
             img(src=image, alt=name).img-fluid.card-img-top
             .card-body
