@@ -1,7 +1,11 @@
-nav#seminar-navbar.navbar.navbar-fixed-top.navbar-expand-md
+nav#seminar-navbar.navbar.navbar-dark.bg-dark.navbar-fixed-top.navbar-expand-md
     .container
-        a(href='https://github.com/hpicgs').nav-link.px-0
-            img(src=require('../../img/cgs_logo.png'), alt="CGS Logo").img-fluid.mt-0
+        a(href='https://hpi.de/doellner/home.html').navbar-brand.px-0
+            img(src=require('../../img/cgs_logo.png'), alt="CGS Logo").img-fluid.mt-0.mr-2
+            | Computer Graphics Systems @ HPI
         ul#nav.navbar-nav.ml-auto
-            li.nav-item: a(href="#").nav-link Link 1
-            li.nav-item: a(href="#").nav-link Link 2
+            li.nav-item: a(href="https://hpi.de/").nav-link HPI
+            li.nav-item: a.nav-link &centerdot;
+            li.nav-item: a(href="https://github.com/hpicgs").nav-link CGS @ GitHub
+            li.nav-item: a.nav-link &centerdot;
+            li.nav-item: a(href="https://github.com/hpicgs/seminar-extending-threejs-2023").nav-link Website Repository
