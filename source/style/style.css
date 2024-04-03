@@ -6,11 +6,6 @@
 @import './sizes.css';
 @import './themes.css';
 
-:root {
-    --navbar-height: 3em;
-    --content-width: 70em;
-}
-
 body {
     font-family: 'Fira Sans', sans-serif;
     font-weight: 300;
@@ -19,45 +14,15 @@ body {
     color: var(--text-color);
 }
 
-code {
-    font-family: 'Fira Mono', monospace;
-    color: var(--inline-code-color);
+section {
+    padding: 1.5rem 0 0;
 }
 
-#main-container {
-    margin: auto;
-    padding: var(--navbar-height) var(--spacing) 0;
-    max-width: var(--content-width);
+.row {
+    margin-top: 1.5rem;
 }
 
-#main-container * {
-    max-width: 100%;
-}
-
-#main-container td {
-    vertical-align: top;
-    padding-bottom: var(--small-spacing);
-}
-
-#fit-picture {
-    width: 100vw;
-    height: auto;
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-}
-
-.d-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
-    gap: var(--spacing);
-    margin: var(--spacing) 0;
-}
-
-.d-none {
-    display: none;
-}
-
-#logo-link {
+.logo-link {
     height: 1em;
     padding-top: 0.1em;
     padding-bottom: 0.2em;

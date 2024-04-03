@@ -1,34 +1,77 @@
 mixin gh-link(student)
     span.nowrap
         a(href=`https://www.github.com/${student.username}`)
-            img(src=require("../img/github-mark-white.png"), alt="GitHub Logo")#logo-link
+            img(src=require("../img/github-mark-white.png"), alt="GitHub Logo").logo-link
             | &nbsp;#[=student.name]
 
 mixin project(name, link, image, ...students)
-    h2
-        | #[=name] – 
-        each student, i in students 
-            | #[+gh-link(student)]
-            if i < students.length - 1
-                | , 
-    a(href=link): img(src=image, alt=name)#fit-picture
+    .row.text-left 
+        .col-12.offset-0
+            h2
+                | #[=name] – 
+                each student, i in students 
+                    | #[+gh-link(student)]
+                    if i < students.length - 1
+                        | , 
+    .row.text-center 
+        .col-10.offset-1.col-sm-8.offset-sm2.col-md-8.offset-md-2
+            a(href=link): img(src=image, alt=name).img-fluid
     if block 
-        block
+        .row.text-left 
+            .col-12.offset-0
+                block
 
 html 
     head 
         title Three.js Seminar
         link(rel="stylesheet", href="https://code.cdn.mozilla.net/fonts/fira.css")
-    body(class="dark")
+    body.dark
         include partials/navbar
-        div#main-container
-            h1 Introduction
-            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In molestie lectus quis erat semper, vel accumsan leo dignissim. Nullam viverra tellus lorem, at pharetra dolor pellentesque eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisl sem, pharetra et odio a, tincidunt aliquam ex. Nunc fringilla ipsum ac mauris bibendum, quis mattis turpis faucibus. Duis ullamcorper nulla orci, in cursus sem elementum in. Integer auctor, orci egestas vestibulum porta, massa quam tincidunt tellus, ut mollis ante enim nec justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis leo eget lacus ultricies, sit amet volutpat ipsum ornare. 
+        section#header.container
+            .row.text-left 
+                .col-12.offset-0
+                    h1 Introduction
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In molestie lectus quis erat semper, vel accumsan leo dignissim. Nullam viverra tellus lorem, at pharetra dolor pellentesque eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisl sem, pharetra et odio a, tincidunt aliquam ex. Nunc fringilla ipsum ac mauris bibendum, quis mattis turpis faucibus. Duis ullamcorper nulla orci, in cursus sem elementum in. Integer auctor, orci egestas vestibulum porta, massa quam tincidunt tellus, ut mollis ante enim nec justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis leo eget lacus ultricies, sit amet volutpat ipsum ornare. 
             +project(
                 "World-in-Hand Navigation for Three.js",
                 "https://orbitnavjs.github.io/WIHNavigationWebsite/",
-                require("../img/wih_preview.png"),
+                require("../img/wih.png"),
                 {name: "Sandro Steeger", username: "Stastez"},
                 {name: "BelanaZ", username: "BelanaZ"}
             )
-                p This navigation method aims to enhance the user experience by allowing users to interact with the virtual world as if it were a tangible object in their hands. By bridging the gap between the user's interaction and the virtual camera's movement, World-In-Hand Navigation offers a more intuitive, robust, and user-friendly navigation experience compared to the traditional navigation controls provided by Three.js
+                p This navigation method aims to enhance the user experience by allowing users to interact with the virtual world as if it were a tangible object in their hands. By bridging the gap between the user's interaction and the virtual camera's movement, World-In-Hand Navigation offers a more intuitive, robust, and user-friendly navigation experience compared to the traditional navigation controls provided by Three.js.
+            +project(
+                "three-openll-labels",
+                "https://strawberriesandcheese.github.io/three-openll-labels/",
+                require("../img/three-openll-labels.png"),
+                {name: "Ulrike Herwig", username: "strawberriesandcheese"}
+            )
+                p This extension adds 2D labels to three.js, allowing users to easily create annotations in their 3D scenes with minimal rendering overhead.
+            +project(
+                "ModelDecay",
+                "https://zerhacker1.github.io/blockdecaydemo/",
+                require("../img/blockdecay.png"),
+                {name: "zerhacker1", username: "zerhacker1"}
+            )
+                p ModelDecay introduces a solution for voxelization and animation within the Three.js library. This tool enables developers to take a 3D model and convert it into a voxelized representation, subsequently animating the fall of these voxels. The prinicipal objective was to examine the possibility of vanishing/decaying 3D model as a type of object in Three.js tested specifically on said voxelization effect.
+            +project(
+                "Playground",
+                "https://abc013.github.io/three.js/playground/",
+                require("../img/playground.png"),
+                {name: "abc013", username: "abc013"}
+            )
+                p (To be added.)
+            +project(
+                "Superquadrics",
+                "https://matteovoges.github.io/extending-three.js/",
+                require("../img/superquadrics.png"),
+                {name: "Matteo Voges", username: "matteovoges"}
+            )
+                p The goal of this project is introducing superquadrics as a new geometry type in three.js and take care of possible compability issues.
+            +project(
+                "k-DOPs in Three.js",
+                "https://robkosm.github.io/three-kdop/",
+                require("../img/kdop.png"),
+                {name: "Robert", username: "robkosm"}
+            )
+                p Bounding volumes offer efficient intersection tests for 3D objects. They help optimize tasks like rendering, physics, and user interaction. Although Three.js includes several types of bounding volumes, it currently lacks support for k-DOPs. This project aims to explore how k-DOPs can be integrated into Three.js and compares their performance with other bounding volumes.
