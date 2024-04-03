@@ -8,7 +8,9 @@ mixin project(name, link, image, ...students)
     .row.text-left 
         .col-12.offset-0
             h2
-                | #[=name] – 
+                a(href=link)
+                    | #[=name]
+                | &nbsp;–&nbsp;
                 each student, i in students 
                     | #[+gh-link(student)]
                     if i < students.length - 1
@@ -30,48 +32,57 @@ html
         section#header.container
             .row.text-left 
                 .col-12.offset-0
-                    h1 Introduction
-                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. In molestie lectus quis erat semper, vel accumsan leo dignissim. Nullam viverra tellus lorem, at pharetra dolor pellentesque eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisl sem, pharetra et odio a, tincidunt aliquam ex. Nunc fringilla ipsum ac mauris bibendum, quis mattis turpis faucibus. Duis ullamcorper nulla orci, in cursus sem elementum in. Integer auctor, orci egestas vestibulum porta, massa quam tincidunt tellus, ut mollis ante enim nec justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis leo eget lacus ultricies, sit amet volutpat ipsum ornare. 
+                    h2.mb-1 Introduction
+                    p
+                        | Three.js is a widely used 3D rendering engine for web browsers with hardware accelerated rendering capabilities based on WebGL and the upcoming WebGPU APIs.
+                        | The feature set of Three.js is broad and comprehensive to allow for quick prototyping, cool demos, and 3D applications.
+                        | However, some computer graphics features in niche gaps are missing.
+                    h2.mt-2.mb-1 Scope and Context
+                    p
+                        | We at the research group for #[a(href="https://hpi.de/doellner/home.html") Computer Graphics Systems], chaired by Prof. Dr. Jürgen Döllner, identified a couple of such missing features and designed a project seminar to fill these gaps.
+                        | As such, we conducted the seminar "3D Computer Graphics: Extending the Three.js Framework" with seven Bachelor's students in the winter semester 2023/24 at Hasso Plattner Institute, Digital Engineering Faculty, University of Potsdam.
+                        | The results were as follows.
+            h1.mt-4.mb-1 Results
             +project(
-                "World-in-Hand Navigation for Three.js",
+                "World-in-Hand Navigation",
                 "https://orbitnavjs.github.io/WIHNavigationWebsite/",
                 require("../img/wih.png"),
-                {name: "Sandro Steeger", username: "Stastez"},
+                {name: "Stastez", username: "Stastez"},
                 {name: "BelanaZ", username: "BelanaZ"}
             )
                 p This navigation method aims to enhance the user experience by allowing users to interact with the virtual world as if it were a tangible object in their hands. By bridging the gap between the user's interaction and the virtual camera's movement, World-In-Hand Navigation offers a more intuitive, robust, and user-friendly navigation experience compared to the traditional navigation controls provided by Three.js.
             +project(
-                "three-openll-labels",
+                "Distance Field Font Rendering",
                 "https://strawberriesandcheese.github.io/three-openll-labels/",
                 require("../img/three-openll-labels.png"),
-                {name: "Ulrike Herwig", username: "strawberriesandcheese"}
+                {name: "strawberriesandcheese", username: "strawberriesandcheese"}
             )
                 p This extension adds 2D labels to three.js, allowing users to easily create annotations in their 3D scenes with minimal rendering overhead.
             +project(
-                "ModelDecay",
+                "Block Decay Effect",
                 "https://zerhacker1.github.io/blockdecaydemo/",
                 require("../img/blockdecay.png"),
                 {name: "zerhacker1", username: "zerhacker1"}
             )
                 p ModelDecay introduces a solution for voxelization and animation within the Three.js library. This tool enables developers to take a 3D model and convert it into a voxelized representation, subsequently animating the fall of these voxels. The prinicipal objective was to examine the possibility of vanishing/decaying 3D model as a type of object in Three.js tested specifically on said voxelization effect.
             +project(
-                "Playground",
+                "Group Nodes for the Playground",
                 "https://abc013.github.io/three.js/playground/",
                 require("../img/playground.png"),
                 {name: "abc013", username: "abc013"}
             )
                 p (To be added.)
             +project(
-                "Superquadrics",
+                "Superquadrics as Base Geometry",
                 "https://matteovoges.github.io/extending-three.js/",
                 require("../img/superquadrics.png"),
-                {name: "Matteo Voges", username: "matteovoges"}
+                {name: "matteovoges", username: "matteovoges"}
             )
                 p The goal of this project is introducing superquadrics as a new geometry type in three.js and take care of possible compability issues.
             +project(
-                "k-DOPs in Three.js",
+                "k-DOPs as Bounding Volume Representation",
                 "https://robkosm.github.io/three-kdop/",
                 require("../img/kdop.png"),
-                {name: "Robert", username: "robkosm"}
+                {name: "robkosm", username: "robkosm"}
             )
                 p Bounding volumes offer efficient intersection tests for 3D objects. They help optimize tasks like rendering, physics, and user interaction. Although Three.js includes several types of bounding volumes, it currently lacks support for k-DOPs. This project aims to explore how k-DOPs can be integrated into Three.js and compares their performance with other bounding volumes.
