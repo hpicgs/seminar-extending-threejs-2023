@@ -1,8 +1,12 @@
 nav#seminar-navbar.navbar.navbar-dark.bg-dark.navbar-fixed-top.navbar-expand-md
     .container
-        a(href='https://hpi.de/doellner/home.html').navbar-brand.px-0
-            img(src=require('../../img/cgs_logo.png'), alt="CGS Logo").img-fluid.mt-0.mr-2
-            | Computer Graphics Systems @ HPI
+        span.d-none.d-lg-block
+            a(href='https://hpi.de/doellner/home.html').navbar-brand.px-0
+                img(src=require('../../img/cgs_logo.png'), alt="CGS Logo").img-fluid.mt-0.mr-2
+                | Computer Graphics Systems @ HPI
+        span.d-block.d-lg-none         
+            a(href='https://hpi.de/doellner/home.html').navbar-brand.px-0
+                img(src=require('../../img/cgs_logo.png'), alt="CGS Logo").img-fluid.mt-0.mr-2
         ul#nav.navbar-nav.ml-auto
             li.nav-item: a(href="https://hpi.de/").nav-link HPI
             li.nav-item: a.nav-link &centerdot;
